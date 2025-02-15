@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 # Function to fetch stock data from Alpha Vantage API
 def get_stock_data(ticker, period='6mo'):
-    api_key = "YOUR_ALPHAVANTAGE_API_KEY"
+    api_key = st.secrets[YIXOLTT4I6KNLFA2]
     url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={ticker}&apikey={api_key}&outputsize=compact"
     try:
         response = requests.get(url)
